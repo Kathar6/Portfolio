@@ -11,7 +11,11 @@ export default function navbar({}: Props) {
   return (
     <div
       className={hstack({
+        position: "fixed",
+        top: "0",
+        left: "0",
         color: "neutral.50",
+        w: "full",
         h: "[3.75rem]",
         gap: "14",
         justifyContent: "center",

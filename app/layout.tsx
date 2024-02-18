@@ -2,43 +2,29 @@
 import type { Metadata } from "next";
 
 // Custom Components
-import Navbar from "./navbar";
+import Navbar from "@components/navbar";
 import Timeline from "@components/timeline";
 
+// Constants
+import { navigationData } from "@constants/navigation";
+
 // Styles
-import { css } from "@styled-system/css";
 import "./globals.css";
+import { css } from "@styled-system/css";
 
 // Utils
 import { Manrope } from "next/font/google";
+import { Suspense } from "react";
 
 const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "800"],
+  weight: ["200", "300", "400", "500", "600", "800"],
 });
 
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Portfolio by Katharsis",
 };
-
-const timelineData = [
-  {
-    name: "Home",
-  },
-  {
-    name: "About",
-  },
-  {
-    name: "Experience",
-  },
-  {
-    name: "Projects",
-  },
-  {
-    name: "Contact",
-  },
-];
 
 export default function RootLayout({
   children,
@@ -48,14 +34,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
+        <Navbar />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Timeline data={navigationData} />
+        </Suspense>
         <div
           className={css({
-            bg: "secondary.500",
-            minH: "lvh",
+            overflowY: "auto",
+            overflowX: "hidden",
+            scrollSnapType: "y mandatory",
+            h: "lvh",
           })}
         >
-          <Navbar />
-          <Timeline data={timelineData} />
           {children}
         </div>
       </body>

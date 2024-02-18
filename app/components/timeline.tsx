@@ -20,9 +20,24 @@ type Props = {
   onChange?: (selectedItem: number) => void;
 };
 
+function Line() {
+  return (
+    <div
+      className={css({
+        position: "absolute",
+        top: "0",
+        right: "1",
+        w: "1",
+        h: "full",
+        bg: "secondary.400",
+      })}
+    ></div>
+  );
+}
+
 export default function Timeline({ data, onChange }: Props) {
   //#region hooks
-  const { selectedItem } = useTimeline(onChange);
+  const { selectedItem, onSelectItem } = useTimeline(onChange);
   //#endregion
 
   return (
@@ -32,24 +47,18 @@ export default function Timeline({ data, onChange }: Props) {
           position: "relative",
           alignItems: "end",
           gap: "16",
+          py: "14",
           h: "full",
         })}
       >
-        <div
-          className={css({
-            position: "absolute",
-            top: "0",
-            right: "1",
-            w: "1",
-            h: "full",
-            bg: "secondary.400",
-          })}
-        ></div>
+        <Line />
         {data.map((item, index) => (
           <TimelineItem
             key={index}
             name={item.name}
+            value={index}
             selected={selectedItem === index}
+            onSelect={onSelectItem}
           />
         ))}
       </div>

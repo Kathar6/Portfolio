@@ -1,21 +1,14 @@
-import { css } from "@styled-system/css";
+import { Fragment } from "react";
 
-export default function Home() {
+// Components
+import HomePage from "@components/home-page";
+import AboutPage from "@components/about-page";
+
+export default function MainPage() {
   return (
-    <div className={css({ px: "40", pt: "40" })}>
-      <div
-        className={css({
-          color: "primary.500",
-          fontSize: "9xl",
-          maxW: "2xl",
-          textWrap: "wrap",
-        })}
-      >
-        Frontend Developer
-      </div>
-      <span className={css({ color: "neutral.50", fontSize: "4xl" })}>
-        Mateo Alonso Pabón García
-      </span>
-    </div>
+    <Fragment>
+      <HomePage />
+      <AboutPage />
+    </Fragment>
   );
 }

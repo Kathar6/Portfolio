@@ -20,8 +20,9 @@
     ],
     "paths": {
       "@styled-system/*": ["styled-system/*"],
-      "@components/*": ["components/*"],
-      "@hooks/*": ["hooks/*"]
+      "@components/*": ["app/components/*"],
+      "@hooks/*": ["app/hooks/*"],
+      "@constants/*": ["app/constants/*"]
     }
   },
   "include": [
