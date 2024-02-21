@@ -1,7 +1,8 @@
 import Image from "next/image";
 
-// Styles
-import { circle } from "@styled-system/patterns";
+// Recipes
+import { skillItem, skillItemChild } from "@component-recipes/skill-item";
+
 // Types
 import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 type Props = {
@@ -11,8 +12,11 @@ type Props = {
 
 export default function SkillsItem({ image, name }: Props) {
   return (
-    <div className={circle({ size: "24", bg: "secondary.400" })}>
-      <Image src={image} alt={name} />
+    <div className={skillItem({})}>
+      <div className={skillItemChild({})}>
+        <Image src={image} alt={name} width="60" height="60" />
+      </div>
+      <span className={skillItemChild({})}>{name}</span>
     </div>
   );
 }

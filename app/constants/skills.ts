@@ -1,3 +1,15 @@
+// Assets
+import html5 from "@assets/html5.png";
+import css3 from "@assets/css3.png";
+import js from "@assets/js.png";
+import reactjs from "@assets/reactjs.png";
+import lerna from "@assets/lerna.png";
+import chakraui from "@assets/chakraui.svg";
+import tailwind from "@assets/tailwind.png";
+import atlassian from "@assets/atlassian.png";
+import github from "@assets/github.svg";
+import git from "@assets/git.png";
+
 // Types
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 type skills = {
@@ -6,43 +18,43 @@ type skills = {
 };
 export const SKILLS: skills[] = [
   {
-    image: "",
+    image: html5,
     name: "HTML5",
   },
   {
-    image: "",
+    image: css3,
     name: "CSS3",
   },
   {
-    image: "",
+    image: js,
     name: "JavaScript",
   },
   {
-    image: "",
+    image: reactjs,
     name: "ReactJs",
   },
   {
-    image: "",
+    image: lerna,
     name: "Lerna",
   },
   {
-    image: "",
+    image: chakraui,
     name: "ChakraUI",
   },
   {
-    image: "",
-    name: "TailwindCSS",
+    image: tailwind,
+    name: "Tailwind",
   },
   {
-    image: "",
+    image: atlassian,
     name: "Atlassian",
   },
   {
-    image: "",
+    image: github,
     name: "Github",
   },
   {
-    image: "",
+    image: git,
     name: "Git",
   },
 ];

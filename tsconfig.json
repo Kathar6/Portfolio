@@ -19,10 +19,12 @@
       }
     ],
     "paths": {
-      "@styled-system/*": ["styled-system/*"],
-      "@components/*": ["app/components/*"],
       "@hooks/*": ["app/hooks/*"],
-      "@constants/*": ["app/constants/*"]
+      "@assets/*": ["app/assets/*"],
+      "@constants/*": ["app/constants/*"],
+      "@components/*": ["app/components/*"],
+      "@styled-system/*": ["styled-system/*"],
+      "@component-recipes/*": ["app/component-recipes/*"]
     }
   },
   "include": [

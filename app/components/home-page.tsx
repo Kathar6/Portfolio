@@ -7,7 +7,7 @@ import PageContainer from "@components/page-container";
 export default function HomePage() {
   return (
     <PageContainer>
-      <div className={css({ p: "20" })}>
+      <div className={css({ p: "20", fontWeight: "lighter" })}>
         <div
           className={css({
             color: "primary.500",

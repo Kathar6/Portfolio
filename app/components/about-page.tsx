@@ -25,7 +25,8 @@ export default function AboutPage() {
         <p>
           I possess experience in crafting and structuring projects from
           inception, ensuring maintainability through the monorepository
-          methodology, utilizing libraries such as Lerna.
+          methodology, utilizing libraries such as{" "}
+          <span className={css({ color: "primary.500" })}>Lerna</span>.
         </p>
       </Box>
       <Title>Skills</Title>
@@ -35,7 +36,7 @@ export default function AboutPage() {
           align: "center",
         })}
       >
-        <Box className={css({ w: "2xl" })}>
+        <Box className={css({ w: "3xl" })}>
           <SkillsList data={SKILLS} />
         </Box>
       </Box>

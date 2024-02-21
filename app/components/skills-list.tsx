@@ -1,8 +1,10 @@
 import { hstack } from "@styled-system/patterns";
 
+// Components
+import SkillsItem from "./skills-item";
+
 // Types
 import type { StaticImport } from "next/dist/shared/lib/get-img-props";
-import SkillsItem from "./skills-item";
 type SkillData = {
   image: string | StaticImport;
   name: string;
@@ -21,9 +23,9 @@ export default function SkillsList({ data }: Props) {
         flexWrap: "wrap",
       })}
     >
-      {data.map((row, index) => (
-        <SkillsItem key={index} image={row.image} name={row.name} />
-      ))}
+      {data.map((row, index) => {
+        return <SkillsItem key={index} image={row.image} name={row.name} />;
+      })}
     </div>
   );
 }
