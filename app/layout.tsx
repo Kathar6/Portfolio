@@ -1,7 +1,9 @@
+import { Suspense } from "react";
+
 // Next
 import type { Metadata } from "next";
 
-// Custom Components
+// Components
 import Navbar from "@components/navbar";
 import Timeline from "@components/timeline";
 
@@ -10,11 +12,9 @@ import { navigationData } from "@constants/navigation";
 
 // Styles
 import "./globals.css";
-import { css } from "@styled-system/css";
 
 // Utils
 import { Manrope } from "next/font/google";
-import { Suspense } from "react";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -33,18 +33,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.className}>
+      <body className={"bg-secondary-500 " + manrope.className}>
         <Navbar />
         <Suspense fallback={<div>Loading...</div>}>
           <Timeline data={navigationData} />
         </Suspense>
         <div
-          className={css({
-            overflowY: "auto",
-            overflowX: "hidden",
-            scrollSnapType: "y mandatory",
-            h: "lvh",
-          })}
+          id="scroller"
+          className="overflow-y-auto overflow-x-hidden snap-y snap-mandatory h-lvh"
         >
           {children}
         </div>

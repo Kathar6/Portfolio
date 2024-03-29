@@ -1,0 +1,25 @@
+.project-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item:hover .project-item-footer {
+  bottom: 0;
+}
+
+.project-item-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 1rem;
+  height: 2.5rem;
+  width: 100%;
+  bottom: -2.5rem;
+  transition: bottom 0.3s;
+}
+
+.project-item-footer img,
+.project-item-footer svg {
+  cursor: pointer;
+}

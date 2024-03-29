@@ -1,0 +1,9 @@
+.download-button {
+  transition:
+    background-position 0.33s,
+    color 0.33s;
+}
+
+.download-button:hover {
+  background-position: 0 100%;
+}

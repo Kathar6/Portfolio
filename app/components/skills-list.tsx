@@ -1,5 +1,3 @@
-import { hstack } from "@styled-system/patterns";
-
 // Components
 import SkillsItem from "./skills-item";
 
@@ -17,12 +15,7 @@ export default function SkillsList({ data }: Props) {
   if (!data || !data.length) return null;
 
   return (
-    <div
-      className={hstack({
-        gap: "12",
-        flexWrap: "wrap",
-      })}
-    >
+    <div className="flex flex-row gap-10 md:gap-12 h-full overflow-x-hidden mx-5">
       {data.map((row, index) => {
         return <SkillsItem key={index} image={row.image} name={row.name} />;
       })}

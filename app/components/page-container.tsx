@@ -1,23 +1,19 @@
-// Styles
-import { css } from "@styled-system/css";
 // Types
 import type { ReactNode } from "react";
 type Props = {
   children: ReactNode;
+  id?: string;
+  className?: string;
 };
 
-export default function PageContainer({ children }: Props) {
+export default function PageContainer({ id, className, children }: Props) {
   return (
     <div
-      className={css({
-        bg: "secondary.500",
-        minH: "lvh",
-        p: "20",
-        pe: "32",
-        scrollSnapAlign: "start",
-        fontWeight: "lighter",
-        color: "neutral.50",
-      })}
+      id={id}
+      className={
+        "page-container min-h-lvh px-5 pt-20 pb-5 sm:pe-10 sm:pb-10 lg:ps-20 lg:pe-32 lg:pb-20 snap-start font-lighter text-neutral-50 " +
+        (className ?? "")
+      }
     >
       {children}
     </div>

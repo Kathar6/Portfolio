@@ -1,4 +1,14 @@
-@layer reset, base, tokens, recipes, utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-600: 224 115 6;
+    --primary-500: 194 78 10;
+    --primary-400: 165 60 18;
+  }
+}
 
 html,
 body {

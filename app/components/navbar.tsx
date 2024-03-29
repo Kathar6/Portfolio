@@ -1,36 +1,14 @@
-// Styles
-import { hstack } from "@styled-system/patterns";
-
 // Vendor
-import { Globe } from "lucide-react";
+import { Languages } from "lucide-react";
 
 // Types
 type Props = {};
 
 export default function navbar({}: Props) {
   return (
-    <div
-      className={hstack({
-        position: "fixed",
-        top: "0",
-        left: "0",
-        color: "neutral.50",
-        w: "full",
-        h: "[3.75rem]",
-        gap: "14",
-        justifyContent: "center",
-        fontSize: "sm",
-        fontWeight: "bold",
-        textTransform: "uppercase",
-      })}
-    >
-      <div>home</div>
-      <div>about</div>
-      <div>experience</div>
-      <div>projects</div>
-      <div>contact</div>
+    <div className="flex flex-cols justify-end items-center gap-14 fixed top-0 left-0 text-sm w-full h-[3.75rem] font-bold uppercase text-neutral-50 px-8">
       <div>
-        <Globe />
+        <Languages />
       </div>
     </div>
   );

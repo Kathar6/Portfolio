@@ -1,7 +1,5 @@
-import { Fragment } from "react";
 // Styles
-import { circle, hstack } from "@styled-system/patterns";
-import { css } from "@styled-system/css";
+import "@styles/timeline-item.css";
 
 // Types
 type Props = {
@@ -19,22 +17,13 @@ export default function TimelineItem({
 }: Props) {
   return (
     <div
-      className={hstack({
-        justifyContent: "end",
-        color: selected ? "primary.500" : "neutral.50",
-        fontSize: "sm",
-      })}
-      onClick={(event) => onSelect(value)}
+      className={`timeline-item flex flex-row justify-end items-center text-sm${selected ? " selected text-primary-500" : " text-neutral-50"}`}
+      onClick={() => onSelect(value)}
     >
-      <span className={css({ me: "1", cursor: "pointer" })}>{name}</span>
+      <span className=" me-4 cursor-pointer animate-fade-right">{name}</span>
       <div
-        className={circle({
-          size: "13px",
-          zIndex: "100",
-          cursor: "pointer",
-          bg: selected ? "primary.500" : "secondary.300",
-        })}
-        onClick={(event) => onSelect(value)}
+        className={`w-[13px] h-[13px] cursor-pointer rounded-full z-50${selected ? " bg-primary-500" : " bg-secondary-300"}`}
+        onClick={() => onSelect(value)}
       />
     </div>
   );

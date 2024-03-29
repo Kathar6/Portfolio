@@ -7,10 +7,6 @@ import useTimeline from "../hooks/use-timeline";
 import TimelineContainer from "./timeline-container";
 import TimelineItem from "./timeline-item";
 
-// Styles
-import { vstack } from "@styled-system/patterns";
-import { css } from "@styled-system/css";
-
 // Types
 type TimelineItem = {
   name: string;
@@ -22,16 +18,7 @@ type Props = {
 
 function Line() {
   return (
-    <div
-      className={css({
-        position: "absolute",
-        top: "0",
-        right: "1",
-        w: "1",
-        h: "full",
-        bg: "secondary.400",
-      })}
-    ></div>
+    <div className="absolute top-0 right-1 w-1 h-full rounded bg-secondary-400"></div>
   );
 }
 
@@ -42,15 +29,7 @@ export default function Timeline({ data, onChange }: Props) {
 
   return (
     <TimelineContainer>
-      <div
-        className={vstack({
-          position: "relative",
-          alignItems: "end",
-          gap: "16",
-          py: "14",
-          h: "full",
-        })}
-      >
+      <div className="flex flex-col relative items-end gap-16 py-14 h-full">
         <Line />
         {data.map((item, index) => (
           <TimelineItem

@@ -1,0 +1,11 @@
+.skill-item {
+  transition: background-position 0.33s;
+}
+
+.skill-item:hover {
+  background-position: 0 100%;
+}
+
+.skill-item:hover div {
+  height: 0;
+}

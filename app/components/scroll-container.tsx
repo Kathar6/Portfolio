@@ -1,8 +1,3 @@
-import React from "react";
-
-// Styles
-import { css } from "@styled-system/css";
-
 // Types
 import type { ReactNode } from "react";
 type Props = {
@@ -11,14 +6,7 @@ type Props = {
 
 export default function ScrollContainer({ children }: Props) {
   return (
-    <div
-      className={css({
-        overflowY: "auto",
-        overflowX: "hidden",
-        scrollSnapType: "y mandatory",
-        h: "lvh",
-      })}
-    >
+    <div className="overflow-y-auto overflow-x-hidden snap-y snap-mandatory h-lvh">
       {children}
     </div>
   );

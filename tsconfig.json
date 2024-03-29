@@ -20,11 +20,11 @@
     ],
     "paths": {
       "@hooks/*": ["app/hooks/*"],
+      "@pages/*": ["app/pages/*"],
       "@assets/*": ["app/assets/*"],
+      "@styles/*": ["app/styles/*"],
       "@constants/*": ["app/constants/*"],
-      "@components/*": ["app/components/*"],
-      "@styled-system/*": ["styled-system/*"],
-      "@component-recipes/*": ["app/component-recipes/*"]
+      "@components/*": ["app/components/*"]
     }
   },
   "include": [

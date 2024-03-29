@@ -1,9 +1,11 @@
 import { Fragment } from "react";
 
 // Components
-import HomePage from "@components/home-page";
-import AboutPage from "@components/about-page";
-import ExperiencePage from "@components/experience-page";
+import HomePage from "@pages/home-page";
+import AboutPage from "@pages/about-page";
+import ExperiencePage from "@pages/experience-page";
+import ProjectsPage from "@pages/projects-page";
+import ContactPage from "@pages/contact-page";
 
 export default function MainPage() {
   return (
@@ -11,6 +13,8 @@ export default function MainPage() {
       <HomePage />
       <AboutPage />
       <ExperiencePage />
+      <ProjectsPage />
+      <ContactPage />
     </Fragment>
   );
 }

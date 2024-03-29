@@ -1,0 +1,13 @@
+.footer {
+  transition:
+    background-position 0.33s,
+    color 0.33s;
+}
+
+.footer:hover svg {
+  animation: bounce 1s infinite;
+}
+
+.footer:hover {
+  background-position: 0 100%;
+}

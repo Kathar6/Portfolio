@@ -1,0 +1,30 @@
+.home-page {
+  overflow: hidden;
+}
+
+.home-page .title {
+  background: linear-gradient(
+    90deg,
+    rgb(var(--primary-400)) 15%,
+    rgb(var(--primary-500)) 30%,
+    rgb(var(--primary-600)) 60%
+  );
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.home-page:before {
+  position: fixed;
+  display: block;
+  content: "";
+  top: -50%;
+  left: 12.5%;
+  width: 75%;
+  height: 75%;
+  z-index: -1;
+  background: linear-gradient(83.21deg, #fff 50%, #1b1f2c 100%);
+  -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.3), transparent 70%);
+  mask-image: radial-gradient(rgba(0, 0, 0, 0.2), transparent 70%);
+}

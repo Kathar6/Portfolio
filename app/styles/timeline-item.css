@@ -1,0 +1,13 @@
+.timeline-item span {
+  opacity: 0;
+  transform: translateX(5rem);
+  transition:
+    transform 0.33s,
+    opacity 0.33s;
+}
+
+.timeline-item:hover span,
+.timeline-item.selected span {
+  opacity: 1;
+  transform: translateX(0);
+}

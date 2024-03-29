@@ -1,0 +1,55 @@
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroller {
+  max-width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #fff 20%,
+    #fff 80%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #fff 20%,
+    #fff 80%,
+    transparent
+  );
+}
+
+.scroller > div {
+  white-space: nowrap;
+}
+
+.scroller > div {
+  animation: scroll 30s linear infinite;
+  animation-delay: calc(30s * -1);
+}
+
+.scroller > div:nth-child(2) {
+  animation: scroll2 30s linear infinite;
+  animation-delay: calc(30s / -2);
+}
+
+.scroller:hover > div {
+  animation-play-state: paused;
+}
