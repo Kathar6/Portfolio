@@ -1,6 +1,6 @@
 
 # dependencies
-/node_modules
+frontend/node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -9,8 +9,11 @@
 /coverage
 
 # next.js
+frontend/.next/
 /.next/
 /out/
+.venv/
+backend/.env
 
 # production
 /build
@@ -34,6 +37,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-## Panda
-styled-system
-styled-system-studio
+# python
+__pycache__
