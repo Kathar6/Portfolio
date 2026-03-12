@@ -1,7 +1,7 @@
 .footer {
   transition:
-    background-position 0.33s,
-    color 0.33s;
+    background-position 0.3s,
+    color 0.3s;
 }
 
 .footer:hover svg {

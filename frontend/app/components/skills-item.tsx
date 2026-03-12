@@ -25,8 +25,11 @@ export default function SkillsItem({
     <div
       className="skill-item 
       cursor-pointer
-      min-w-24 min-h-24 
-      xl:min-w-28 xl:min-h-28 
+      w-16 h-16 
+      sm:w-20 sm:h-20
+      md:w-24 md:h-24
+      lg:w-28 lg:h-28
+      xl:w-32 xl:h-32
       relative overflow-hidden rounded-full 
       bg-gradient-to-b from-secondary-400 from-50% to-primary-500 to-50% bg-[length:100%_200%]"
     >
@@ -36,9 +39,19 @@ export default function SkillsItem({
           text-lg w-full h-full 
           transition-[height] duration-300"
       >
-        <div className="flex justify-center items-center w-10 h-10 lg:w-[3.75rem] lg:h-[3.75rem]">
+        <div
+          className="
+          flex 
+          justify-center items-center 
+          w-8 h-8 
+          sm:w-10 sm:h-10
+          md:w-12 md:h-12
+          lg:w-14 lg:h-14 
+          xl:w-16 xl:h-16
+        "
+        >
           {image && (
-            <Image src={image} alt={name} objectFit="fill" {...props} />
+            <Image src={image} alt={name} {...props} />
           )}
           {children && children}
         </div>

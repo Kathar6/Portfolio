@@ -15,7 +15,7 @@ export default function SkillsList({ data }: Props) {
   if (!data || !data.length) return null;
 
   return (
-    <div className="flex flex-row gap-10 md:gap-12 h-full overflow-x-hidden mx-5">
+    <div className="flex flex-row flex-wrap gap-8 md:gap-8 h-full overflow-x-hidden mx-5">
       {data.map((row, index) => {
         return <SkillsItem key={index} image={row.image} name={row.name} />;
       })}

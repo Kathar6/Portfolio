@@ -1,30 +1,21 @@
-// Types
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-
 type Navigation = {
-  image: string | StaticImport;
-  name: string;
+  id: string;
 };
 
 export const navigationData: Navigation[] = [
   {
-    image: "@assets/chakraui.svg",
-    name: "Home",
+    id: "home",
   },
   {
-    image: "@assets/chakraui.svg",
-    name: "About",
+    id: "about",
   },
   {
-    image: "",
-    name: "Experience",
+    id: "experience",
   },
   {
-    image: "",
-    name: "Projects",
+    id: "projects",
   },
   {
-    image: "",
-    name: "Contact",
+    id: "contact",
   },
 ];

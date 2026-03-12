@@ -2,21 +2,28 @@
 import CardTimeLine from "./card-timeline";
 import ExperienceTimelineItem from "./experience-timeline-item";
 
+// Vendor
+import { useTranslations } from "next-intl";
+
 // Types
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 type ExperienceTimelineData = {
-  title: string;
-  subtitle?: string;
-  description: string;
-  image: string | StaticImport;
+  id: string;
+  data: {
+    id: string,
+    image: string | StaticImport
+  }[]
 };
 
 type Props = {
-  data: ExperienceTimelineData[];
+  data: ExperienceTimelineData;
   alignment: "start" | "end";
 };
 
 export default function ExperienceTimeline({ data, alignment }: Props) {
+  //#region hooks
+  const t = useTranslations('experience')
+  //#endregion
   const className =
     alignment === "start" ? " sm:ps-10 items-start  " : " sm:pe-10 items-end ";
   return (
@@ -28,9 +35,11 @@ export default function ExperienceTimeline({ data, alignment }: Props) {
       }
     >
       <CardTimeLine alignment={alignment} />
-      {data.map((item, index) => (
-        <ExperienceTimelineItem key={index} {...item} alignment={alignment} />
-      ))}
+      {data.data.map((item, index) => {
+        const translatedItem = t.raw(`${data.id}.${item.id}`)
+        const experienceData = { ...translatedItem, image: item.image }
+        return <ExperienceTimelineItem key={index} {...experienceData} alignment={alignment} />
+      })}
     </div>
   );
 }

@@ -15,7 +15,7 @@ export default function DownloadButton({
   return (
     <button
       className={
-        "download-button flex justify-between items-center p-5 w-96 h-[6.25rem] text-3xl font-lighter text-primary-500 bg-gradient-to-b from-secondary-400 from-50% to-primary-500 to-50% bg-[length:100%_200%] hover:text-neutral-50"
+        "download-button cursor-pointer flex justify-between items-center p-5 w-96 h-[6.25rem] text-3xl font-lighter text-primary-500 bg-gradient-to-b from-secondary-400 from-50% to-primary-500 to-50% bg-[length:100%_200%] hover:text-neutral-50"
       }
       {...props}
     >

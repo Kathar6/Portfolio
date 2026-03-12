@@ -1,0 +1,77 @@
+{
+  "home": {
+    "title": "Full Stack Developer"
+  },
+  "about": {
+    "title": "About",
+    "skills_title": "Skills",
+    "description_1": "I design and deliver scalable web applications with a strong focus on architecture, maintainability, and engineering standards. I have led frontend development from the ground up using React.js and actively contributed to backend systems built with Laravel and Node.js.",
+    "description_2": "My approach goes beyond feature implementation. I focus on building structured systems: defining modular architectures, applying",
+    "description_3": "principles, and enforcing clean code practices to ensure long-term scalability. I have experience standardizing Git workflows, implementing semantic versioning strategies, and managing monorepos with controlled release processes to create predictable and secure production environments.",
+    "description_4": "I thrive in collaborative, agile teams where technical decisions matter. My objective is to contribute not only through development, but by strengthening code quality, delivery processes, and overall system reliability."
+  },
+  "experience": {
+    "title": "Experience",
+    "education_title": "Education",
+    "experience": {
+      "movilbox": {
+        "title": "Movilbox",
+        "subtitle": "Software Developer",
+        "start_date": "11/2021",
+        "end_date": "02/2026",
+        "description": [
+          "Led the end-to-end frontend development from the ground up using React.js, establishing a modular architecture, scalable project structure, and long-term technical standards to support product growth.",
+          "Contributed strategically to backend development in Laravel (PHP), designing and optimizing RESTful APIs to ensure performance, maintainability, and seamless frontend-backend integration.",
+          "Architected and implemented a monorepo strategy with Lerna, enabling scalable multi-module development, improving cross-project code reuse, and reducing maintenance overhead.",
+          "Defined and enforced a structured Git branching strategy, enhancing team collaboration, minimizing integration conflicts, and improving delivery predictability.",
+          "Established a structured release and versioning workflow using Lerna and Git tags, ensuring production traceability, controlled rollouts, and reliable version governance.",
+          "Standardized commit conventions under Conventional Commits, strengthening semantic versioning practices and improving repository clarity and long-term maintainability.",
+          "Designed a controlled patch-based production deployment process, reducing release risk and increasing operational stability across delivery cycles."
+        ]
+      },
+      "garantias": {
+        "title": "Garantias Comunitarias",
+        "subtitle": "Software Developer",
+        "start_date": "10/2021",
+        "end_date": "11/2021",
+        "description": [
+          "Supported the migration of views and modules into legacy sections of the project, ensuring compatibility and structural consistency.",
+          "Collaborated on enhancing dashboard services and user-related information sections, improving data presentation and overall system usability."
+        ]
+      }
+    },
+    "education": {
+      "adsi": {
+        "title": "Information Systems Analysis and Development",
+        "subtitle": "Associate Degree",
+        "start_date": "01/2018",
+        "end_date": "05/2020",
+        "description": []
+      },
+      "media_tecnica": {
+        "title": "Technician in Software Development",
+        "subtitle": "Technical major",
+        "start_date": "01/2016",
+        "end_date": "12/2017",
+        "description": []
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "contact": {
+    "title": "Contact",
+    "resume_button": "Download Resume"
+  },
+  "copy_message": {
+    "text": "Copied to clipboard."
+  },
+  "timeline": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}

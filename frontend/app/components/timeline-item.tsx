@@ -22,7 +22,7 @@ export default function TimelineItem({
     >
       <span className=" me-4 cursor-pointer animate-fade-right">{name}</span>
       <div
-        className={`w-[13px] h-[13px] cursor-pointer rounded-full z-50${selected ? " bg-primary-500" : " bg-secondary-300"}`}
+        className={`timeline-chip w-[13px] h-[13px] cursor-pointer rounded-full${selected ? " bg-primary-500" : " bg-secondary-300"}`}
         onClick={() => onSelect(value)}
       />
     </div>

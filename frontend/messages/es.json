@@ -1,0 +1,77 @@
+{
+  "home": {
+    "title": "Desarrollador Full Stack"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "skills_title": "Habilidades",
+    "description_1": "Diseño y desarrollo aplicaciones web escalables con un fuerte enfoque en arquitectura, mantenibilidad y estándares de ingeniería. He liderado el desarrollo frontend desde cero utilizando React.js y he contribuido activamente a sistemas backend construidos con Laravel y Node.js.",
+    "description_2": "Mi enfoque va más allá de la implementación de funcionalidades. Me concentro en construir sistemas estructurados: definiendo arquitecturas modulares, aplicando principios",
+    "description_3": " y estableciendo prácticas de código limpio para garantizar escalabilidad a largo plazo. Tengo experiencia estandarizando flujos de trabajo en Git, implementando estrategias de versionado semántico y gestionando monorepos con procesos de liberación controlados para crear entornos de producción predecibles y seguros.",
+    "description_4": "Me desarrollo mejor en equipos colaborativos y ágiles donde las decisiones técnicas tienen impacto. Mi objetivo es contribuir no solo a través del desarrollo, sino fortaleciendo la calidad del código, los procesos de entrega y la confiabilidad general del sistema."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "education_title": "Educación",
+    "experience": {
+      "movilbox": {
+        "title": "Movilbox",
+        "subtitle": "Desarrollador de Software",
+        "start_date": "11/2021",
+        "end_date": "02/2026",
+        "description": [
+          "Lideré el desarrollo frontend de extremo a extremo desde cero utilizando React.js, estableciendo una arquitectura modular, una estructura de proyecto escalable y estándares técnicos a largo plazo para soportar el crecimiento del producto.",
+          "Contribuí al desarrollo backend en Laravel (PHP), diseñando y optimizando APIs RESTful garantizando rendimiento, mantenibilidad e integración fluida entre frontend y backend.",
+          "Diseñé la migración a un monorepo con Lerna, optimizando el desarrollo modular y la reutilización de código.",
+          "Definí y establecí una estrategia estructurada de ramas en Git, mejorando la colaboración del equipo, minimizando conflictos de integración y aumentando la previsibilidad en las entregas.",
+          "Establecí un flujo de liberación y versionamiento estructurado utilizando Lerna y Git tags, garantizando trazabilidad en producción, despliegues controlados y una gobernanza confiable de versiones.",
+          "Estandaricé las convenciones de commits bajo Conventional Commits, fortaleciendo las prácticas de versionado semántico y mejorando la claridad y mantenibilidad a largo plazo del repositorio.",
+          "Diseñé un proceso de despliegue a producción basado en parches controlados, reduciendo el riesgo en cada liberación y aumentando la estabilidad operativa en los ciclos de entrega."
+        ]
+      },
+      "garantias": {
+        "title": "Garantías Comunitarias",
+        "subtitle": "Desarrollador de Software",
+        "start_date": "10/2021",
+        "end_date": "11/2021",
+        "description": [
+          "Apoyé la migración de vistas y módulos hacia secciones legacy del proyecto, garantizando compatibilidad y coherencia estructural.",
+          "Colaboré en la mejora de servicios de dashboards y secciones de información relacionadas con el usuario, optimizando la presentación de datos y la usabilidad general del sistema."
+        ]
+      }
+    },
+    "education": {
+      "adsi": {
+        "title": "Análisis y Desarrollo de Sistemas de Información",
+        "subtitle": "Tecnólogo",
+        "start_date": "01/2018",
+        "end_date": "05/2020",
+        "description": []
+      },
+      "media_tecnica": {
+        "title": "Técnico en Desarrollo de Software",
+        "subtitle": "Media técnica",
+        "start_date": "01/2016",
+        "end_date": "12/2017",
+        "description": []
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos"
+  },
+  "contact": {
+    "title": "Contacto",
+    "resume_button": "Descargar Curriculum"
+  },
+  "copy_message": {
+    "text": "Copiado al portapapeles."
+  },
+  "timeline": {
+    "home": "Inicio",
+    "about": "Sobre mi",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  }
+}

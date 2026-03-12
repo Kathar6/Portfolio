@@ -1,0 +1,37 @@
+@keyframes modalFadeIn {
+  0% {
+    display: block;
+  }
+  1% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes modalFadeOut {
+  0% {
+    transform: scale(1);
+  }
+  99% {
+    transform: scale(0);
+  }
+  100% {
+    display: none;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 5rem;
+  left: 20vw;
+  right: 20vw;
+  width: 50%;
+  z-index: 950;
+  animation: modalFadeOut 1 0.3s;
+}
+
+.modal.active {
+  animation: modalFadeIn 1 0.3s;
+}

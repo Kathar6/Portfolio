@@ -11,7 +11,9 @@ type Props = {
   image: string | StaticImport;
   title: string;
   subtitle?: string;
-  description: string;
+  description: string[];
+  start_date: string;
+  end_date: string;
   alignment: "start" | "end";
 };
 
@@ -20,6 +22,8 @@ export default function ExperienceTimelineItem({
   description,
   image,
   subtitle,
+  start_date,
+  end_date,
   alignment,
 }: Props) {
   return (
@@ -32,10 +36,15 @@ export default function ExperienceTimelineItem({
           <CardLogo src={image} alt="logo" />
           <div>
             <CardTitle>{title}</CardTitle>
-            <small>{subtitle}</small>
+            <small>{subtitle} | {`${start_date} - ${end_date}`}</small>
           </div>
         </CardHeader>
-        <CardBody>{description}</CardBody>
+        <CardBody>
+          {description.map((item, index) => {
+            if (!item) return
+            return <p key={index}>- {item}</p>
+          })}
+        </CardBody>
       </Card>
     </div>
   );

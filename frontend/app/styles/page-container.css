@@ -1,0 +1,9 @@
+.page-container {
+  background-repeat: repeat;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.page-container.bg {
+  background: url("~@assets/dot.svg");
+}

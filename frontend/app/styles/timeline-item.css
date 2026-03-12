@@ -2,8 +2,12 @@
   opacity: 0;
   transform: translateX(5rem);
   transition:
-    transform 0.33s,
-    opacity 0.33s;
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+.timeline-item .timeline-chip {
+  z-index: 50;
 }
 
 .timeline-item:hover span,

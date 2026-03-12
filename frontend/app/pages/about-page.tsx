@@ -2,37 +2,38 @@
 import PageContainer from "@components/page-container";
 import Title from "@components/title";
 import SkillsList from "@components/skills-list";
-import Scroller from "@components/scroller";
 import Footer from "@components/footer";
 
 // Constants
 import { SKILLS } from "@constants/skills";
 
+// Vendor
+import { useTranslations } from "next-intl";
+
 export default function AboutPage() {
+  //#region hooks
+  const t = useTranslations('about')
+  //#endregion
   return (
-    <PageContainer id="about" className="relative">
-      <Title>About</Title>
-      <div className="ps-2 pe-0 sm:ps-14 sm:pe-24 md:pe-48 lg:pe-72 sm:text-lg lg:text-xl mb-10">
-        <p className="mb-6">
-          {"I'm"} someone committed to excellence and teamwork. I enjoy tackling
-          complex challenges autonomously, but I also deeply value collaboration
-          and the exchange of ideas that occurs in a collaborative
-          environment.  
+    <PageContainer bg id="about" className="relative">
+      <Title>{t('title')}</Title>
+      <div className="ps-2 pe-0 sm:ps-14 sm:pe-24 md:pe-48 lg:pe-48 sm:text-lg lg:text-xl mb-10">
+        <p>
+          {t('description_1')}
         </p>
         <p>
-          I possess experience in crafting and structuring projects from
-          inception, ensuring maintainability through the monorepository
-          methodology, utilizing libraries such as{" "}
-          <span className="text-primary-500">Lerna</span>.
+          {t('description_2')} <span className="text-primary-500">SOLID</span> {t('description_3')}
+        </p>
+        <p>
+          {t('description_4')}
         </p>
       </div>
+
       <div>
-        <Title>Skills</Title>
-        <div className="flex flex-col pe-4 lg:pe-0 max-h-42 mt-28">
-          <div className="max-h-62 sm:w-full">
-            <Scroller>
-              <SkillsList data={SKILLS} />
-            </Scroller>
+        <Title>{t('skills_title')}</Title>
+        <div className="flex flex-col justify-center pe-4 lg:pe-0 mt-5">
+          <div className="sm:w-full flex justify-center">
+            <SkillsList data={SKILLS} />
           </div>
         </div>
       </div>

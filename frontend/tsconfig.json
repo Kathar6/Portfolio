@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": "./",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "baseUrl": ".",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,12 +23,33 @@
       }
     ],
     "paths": {
-      "@hooks/*": ["app/hooks/*"],
-      "@pages/*": ["app/pages/*"],
-      "@assets/*": ["app/assets/*"],
-      "@styles/*": ["app/styles/*"],
-      "@constants/*": ["app/constants/*"],
-      "@components/*": ["app/components/*"]
+      "@root/*": [
+        "*"
+      ],
+      "@/*": [
+        "app/*"
+      ],
+      "@hooks/*": [
+        "app/hooks/*"
+      ],
+      "@pages/*": [
+        "app/pages/*"
+      ],
+      "@assets/*": [
+        "app/assets/*"
+      ],
+      "@styles/*": [
+        "app/styles/*"
+      ],
+      "@constants/*": [
+        "app/constants/*"
+      ],
+      "@components/*": [
+        "app/components/*"
+      ],
+      "@contexts/*": [
+        "app/contexts/*"
+      ]
     }
   },
   "include": [
@@ -32,7 +57,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "styled-system"
+    "styled-system",
+    "next.config.mjs"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

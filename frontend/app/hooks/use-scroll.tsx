@@ -6,6 +6,18 @@ export default function useScroll() {
   //#endregion
 
   //#region handlers
+  const findCurrentVisiblePageIndex = (pages: HTMLElement[]) => {
+    if (!pages.length) return -1;
+
+    const visiblePageIndexFound = pages.findIndex((page, index) => {
+      const isVisible = page.getBoundingClientRect().y === 0;
+
+      return isVisible;
+    });
+
+    return visiblePageIndexFound;
+  };
+
   const getPages = () => {
     const pages = document.querySelectorAll<HTMLElement>(".page-container");
 
@@ -18,11 +30,7 @@ export default function useScroll() {
   const syncCurrentPage = () => {
     // Set current page manually the first time, next the listener handle it
     const pages = getPages();
-    const pageFound = pages.findIndex((page, index) => {
-      const isVisible = page.getBoundingClientRect().y === 0;
-
-      return isVisible;
-    });
+    const pageFound = findCurrentVisiblePageIndex(pages);
 
     if (pageFound === -1) return () => {};
 
@@ -37,11 +45,7 @@ export default function useScroll() {
     const handleSearchPage = () => {
       const pages = getPages();
 
-      const pageFound = pages.findIndex((page) => {
-        const isVisible = page.getBoundingClientRect().y === 0;
-
-        return isVisible;
-      });
+      const pageFound = findCurrentVisiblePageIndex(pages);
 
       if (pageFound === -1) return;
 

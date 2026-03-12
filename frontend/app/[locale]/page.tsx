@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, Suspense } from "react";
 
 // Components
 import HomePage from "@pages/home-page";
@@ -13,7 +13,9 @@ export default function MainPage() {
       <HomePage />
       <AboutPage />
       <ExperiencePage />
-      <ProjectsPage />
+      <Suspense fallback={<p>cargando traducciones...</p>}>
+        <ProjectsPage />
+      </Suspense>
       <ContactPage />
     </Fragment>
   );

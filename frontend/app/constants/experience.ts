@@ -7,39 +7,37 @@ import sena from "@assets/sena.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 type Experience = {
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string | StaticImport;
+  id: string,
+  data: {
+    id: string,
+    image: string | StaticImport;
+  }[]
 };
 
-export const experienceData: Experience[] = [
-  {
-    title: "Movilbox",
-    subtitle: "Frontend Developer | 11/2021 - Present",
-    description: "asdkfjasdlkfj",
-    image: movilbox,
-  },
-  {
-    title: "Garantias Comunitarias",
-    subtitle: "Software Developer | 10/2021 - 11/2021",
-    description: "asdkfjasdlkfj",
-    image: garantias,
-  },
-];
+export const experienceData: Experience = {
+  id: "experience",
+  data: [
+    {
+      id: "movilbox",
+      image: movilbox,
+    },
+    {
+      id: "garantias",
+      image: garantias,
+    },
+  ]
+};
 
-export const educationData: Experience[] = [
-  {
-    title: "Information Systems Analysis and Development",
-    subtitle: "Associate Degree",
-    description:
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-    image: sena,
-  },
-  {
-    title: "Technician in Software Development",
-    subtitle: "Technical major",
-    description: "description",
-    image: sena,
-  },
-];
+export const educationData: Experience = {
+  id: "education",
+  data: [
+    {
+      id: "adsi",
+      image: sena,
+    },
+    {
+      id: "media_tecnica",
+      image: sena,
+    },
+  ]
+};
