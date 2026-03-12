@@ -1,40 +1,65 @@
-<<<<<<< HEAD
-# Portfolio
-=======
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portafolio
 
-## Getting Started
+Este repositorio contiene un portafolio personal que permite mostrar experiencia,
+habilidades y proyectos realizados a lo largo de los anos. La aplicacion tiene una
+parte frontend (Next.js) y una API backend (FastAPI) que sirve datos de proyectos.
 
-First, run the development server:
+Estructura principal:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- `frontend/` - aplicacion Next.js (React + TypeScript + Tailwind).
+- `backend/` - API en Python (FastAPI). Contiene el codigo en `backend/app/`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Requisitos basicos:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js (v18+ recomendado) y npm/yarn/pnpm para el frontend.
+- Python 3.10+ para el backend.
+- Docker (opcional) si se prefiere ejecutar el backend en contenedor.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Frontend - comandos comunes (en `frontend/`):
 
-## Learn More
+- Instalar dependencias:
+  `npm install`  # o `yarn` / `pnpm install`
+- Desarrollo (hot-reload):
+  `npm run dev`
+- Construir para produccion:
+  `npm run build`
+- Iniciar servidor de produccion:
+  `npm run start`
+- Lint:
+  `npm run lint`
 
-To learn more about Next.js, take a look at the following resources:
+Backend - comandos comunes (desde la raiz `backend/`):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Crear y activar entorno virtual:
+  `python -m venv .venv`
+  `source .venv/bin/activate`  # Linux / macOS
+  `.venv\Scripts\activate`    # Windows (PowerShell/CMD)
+- Instalar dependencias:
+  `pip install -r requirements.txt`
+- Ejecutar en modo desarrollo (uvicorn, recarga automatica):
+  `cd app`
+  `uvicorn main:app --reload --port 8000`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Alternativa: usar la utilidad de FastAPI (si esta instalada):
+  `cd app`
+  `fastapi dev main.py`
 
-## Deploy on Vercel
+Backend con Docker (opcional):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Build imagen de desarrollo:
+  `docker build -f Dockerfile.dev -t portfolio-backend:dev .`
+- Ejecutar contenedor:
+  `docker run -p 8000:8000 portfolio-backend:dev`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
->>>>>>> b5531ea (Initial commit from Create Next App)
+Notas y siguientes pasos:
+
+- El frontend se conecta a la API del backend para obtener datos de proyectos.
+- Si se despliega en produccion, revisar variables de entorno y puertos.
+- Se pueden añadir scripts de test (por ejemplo `vitest`) en `frontend/` si
+  se requiere testing automatizado.
+
+Contacto / mantenimiento:
+
+- Si necesitas que actualice este README con variables de entorno, ejemplos de
+  peticiones a la API o instrucciones de despliegue concretas, dime que prefieres
+  y lo agrego.
