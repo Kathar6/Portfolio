@@ -8,7 +8,9 @@ class Settings(BaseSettings):
     master_url: str = ""
     master_key: str = ""
 
-    model_config = SettingsConfigDict(env_file="./.env", env_file_encoding="utf-8")
+    model_config = SettingsConfigDict(
+        env_file="env", env_file_encoding="utf-8", extra="ignore"
+    )
 
 
 # Caches the function, so it will be called once
